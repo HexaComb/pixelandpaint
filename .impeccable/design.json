@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-11T00:00:00Z",
+  "title": "Design System: Pixel & Paint",
+  "extensions": {
+    "colorMeta": {
+      "pixel-yellow": {
+        "role": "primary",
+        "displayName": "Pixel Yellow",
+        "canonical": "#FFC83D",
+        "description": "Primary brand color. Dominant surface in logo, event graphics, and hero backgrounds. Optimistic and high-energy.",
+        "tonalRamp": [
+          "#4D3A00",
+          "#7A5E00",
+          "#A88200",
+          "#D4A600",
+          "#FFC83D",
+          "#FFD566",
+          "#FFE28F",
+          "#FFF0C2"
+        ]
+      },
+      "ink-navy": {
+        "role": "neutral",
+        "displayName": "Ink Navy",
+        "canonical": "#102A43",
+        "description": "Primary text, keylines, borders, and structural outlines. The grounding dark that gives the palette its poster-print quality.",
+        "tonalRamp": [
+          "#0A1A2A",
+          "#102A43",
+          "#1E3A5F",
+          "#2D4A6F",
+          "#3D5A7F",
+          "#5A7A9A",
+          "#8AAABB",
+          "#B8D4E3"
+        ]
+      },
+      "pixel-pink": {
+        "role": "accent",
+        "displayName": "Pixel Pink",
+        "canonical": "#F2388A",
+        "description": "High-energy accent for CTAs, selection highlights, and painted color bars. Demands attention without competing with yellow.",
+        "tonalRamp": [
+          "#4D0F2A",
+          "#7A1844",
+          "#A8225E",
+          "#D42C78",
+          "#F2388A",
+          "#F560A2",
+          "#F88FBB",
+          "#FCC2DA"
+        ]
+      },
+      "digital-blue": {
+        "role": "accent",
+        "displayName": "Digital Blue",
+        "canonical": "#248FCE",
+        "description": "Technology accent. Used for pixel clusters, secondary links, and digital/tech-themed sections.",
+        "tonalRamp": [
+          "#0A2A40",
+          "#134466",
+          "#1C5E8C",
+          "#2478B2",
+          "#248FCE",
+          "#4DA6DB",
+          "#7ABDE5",
+          "#ADD6F0"
+        ]
+      },
+      "community-green": {
+        "role": "accent",
+        "displayName": "Community Green",
+        "canonical": "#36B86A",
+        "description": "Growth and community accent. Used for success states, community-themed elements, and pixel clusters.",
+        "tonalRamp": [
+          "#0D3820",
+          "#165A34",
+          "#207C48",
+          "#2A9A5C",
+          "#36B86A",
+          "#5CC888",
+          "#88D8A8",
+          "#B8E8CC"
+        ]
+      },
+      "brush-orange": {
+        "role": "accent",
+        "displayName": "Brush Orange",
+        "canonical": "#FF6B35",
+        "description": "Art and creativity accent. Warm, energetic, used for pixel clusters and art-themed callouts.",
+        "tonalRamp": [
+          "#4D1E0A",
+          "#7A3014",
+          "#A8421E",
+          "#D45428",
+          "#FF6B35",
+          "#FF8A5E",
+          "#FFAA88",
+          "#FFCCB8"
+        ]
+      },
+      "coral-red": {
+        "role": "accent",
+        "displayName": "Coral Red",
+        "canonical": "#EE3E47",
+        "description": "Error states and urgent callouts only. Not a decorative color.",
+        "tonalRamp": [
+          "#4D1215",
+          "#7A1C22",
+          "#A8262F",
+          "#D4303C",
+          "#EE3E47",
+          "#F2656C",
+          "#F58F94",
+          "#F8BBBD"
+        ]
+      },
+      "canvas-cream": {
+        "role": "neutral",
+        "displayName": "Canvas Cream",
+        "canonical": "#FFF7E5",
+        "description": "Page ground. Warm paper-like surface that lets the saturated palette pop without competing."
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "family": "Archivo Black",
+        "purpose": "Hero h1 and major section headlines. Compact, high-contrast, slightly tightened tracking."
+      },
+      "body": {
+        "displayName": "Body",
+        "family": "DM Sans",
+        "purpose": "All body copy, metadata, navigation, and UI text. Open and readable at all sizes."
+      },
+      "eyebrow": {
+        "displayName": "Eyebrow",
+        "family": "DM Sans",
+        "purpose": "Short uppercase labels above headlines. Extrabold, tracked wide (0.18-0.2em)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "Hard Offset",
+        "value": "12px 12px 0 0 #102A43",
+        "purpose": "Primary card and panel shadow. Screen-print poster aesthetic. No blur."
+      },
+      {
+        "name": "Hard Offset Hover",
+        "value": "16px 16px 0 0 #102A43",
+        "purpose": "Hover state for interactive cards. Slightly larger offset."
+      },
+      {
+        "name": "Hard Offset Small",
+        "value": "8px 8px 0 0 #102A43",
+        "purpose": "Mobile and smaller elements. Reduced offset for tight spaces."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Default easing for all transitions. Quick entry, gentle settle."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Link",
+      "kind": "link",
+      "refersTo": "cta-primary",
+      "description": "Underline-accented CTA with arrow. Pink bottom border, navy text, hover lift.",
+      "html": "<a href=\"#\" class=\"cta-primary\">Follow the work <span aria-hidden=\"true\">↗</span></a>",
+      "css": ".cta-primary { display: inline-flex; align-items: center; gap: 0.75rem; border-bottom: 4px solid #F2388A; padding-bottom: 0.5rem; font-size: 0.875rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.16em; color: #102A43; text-decoration: none; transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1); } .cta-primary:hover { transform: translateY(-2px); } .cta-primary:active { transform: scale(0.97); } .cta-primary:focus-visible { outline: 2px solid #102A43; outline-offset: 6px; }"
+    },
+    {
+      "name": "Logo Card",
+      "kind": "card",
+      "refersTo": "logo-card",
+      "description": "Bordered card with hard-offset shadow and slight rotation. Yellow background, navy border.",
+      "html": "<figure class=\"logo-card\"><img src=\"/pixelandpaint-logo.jpg\" alt=\"Pixel & Paint logo\" /></figure>",
+      "css": ".logo-card { border: 3px solid #102A43; background: #FFC83D; padding: 1rem; box-shadow: 12px 12px 0 0 #102A43; transform: rotate(1deg); transition: transform 220ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 220ms cubic-bezier(0.23, 1, 0.32, 1); } .logo-card:hover { transform: translateY(-2px) rotate(0deg); box-shadow: 16px 16px 0 0 #102A43; }"
+    },
+    {
+      "name": "Pixel Ribbon",
+      "kind": "decoration",
+      "refersTo": "pixel-ribbon",
+      "description": "Vertical left-edge color bar. Five-segment gradient of brand accents with navy right border.",
+      "html": "<div aria-hidden=\"true\" class=\"pixel-ribbon\"></div>",
+      "css": ".pixel-ribbon { position: absolute; inset: 0 auto 0 0; z-index: 20; width: 10px; background: linear-gradient(to bottom, #F2388A 0 20%, #248FCE 20% 40%, #36B86A 40% 60%, #FF6B35 60% 80%, #FFC83D 80% 100%); border-right: 2px solid #102A43; }"
+    },
+    {
+      "name": "Color Swatch",
+      "kind": "indicator",
+      "refersTo": "swatch",
+      "description": "Small rectangular color sample with navy border. Used in footer and brand reference.",
+      "html": "<li class=\"swatch\" style=\"background: #FFC83D\" title=\"Pixel Yellow #FFC83D\"><span class=\"sr-only\">Pixel Yellow: #FFC83D</span></li>",
+      "css": ".swatch { height: 1.25rem; width: 2.5rem; border: 2px solid #102A43; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Sunny Pixel Workshop",
+    "overview": "Pixel & Paint is a joyful, poster-like design system built on saturated primary colors, hard-edge navy outlines, and screen-print-inspired shadows. The brand should feel like a hand-pulled community poster: bold, tactile, and unmistakably handmade. It is warm, energetic, and rooted in Fresno's neighborhoods.",
+    "keyCharacteristics": [
+      "Saturated five-color accent palette on warm cream ground, never muted or pastel.",
+      "Hard-offset navy shadows with zero blur, evoking screen-print registration.",
+      "Strong navy keylines and borders on all major surfaces.",
+      "Pixel clusters as decorative structural elements, referencing the digital + art duality.",
+      "Slight rotations and asymmetric layouts that feel handmade, not templated.",
+      "Archivo Black for display headlines, DM Sans for everything else."
+    ],
+    "rules": [
+      {
+        "name": "The Yellow Is Home Rule",
+        "section": "colors",
+        "body": "Pixel Yellow is the signature brand surface. If a single color must represent Pixel & Paint, it is always yellow, never pink or blue."
+      },
+      {
+        "name": "The Hard Edge Rule",
+        "section": "elevation",
+        "body": "Shadows use zero blur and solid navy color. No soft drop shadows, no glows, no gradients in shadows. The aesthetic is screen-print, not digital."
+      },
+      {
+        "name": "The Navy Frames Everything Rule",
+        "section": "colors",
+        "body": "Major surfaces, cards, and interactive elements get a navy border (2-3px). This is the visual glue that holds the saturated palette together."
+      },
+      {
+        "name": "The Pixel Cluster Rule",
+        "section": "decoration",
+        "body": "Small navy-bordered colored squares arranged in offset patterns serve as the primary decorative motif. They reference both digital pixels and paint swatches."
+      },
+      {
+        "name": "The Poster Rotation Rule",
+        "section": "layout",
+        "body": "Key brand elements (logo card, feature cards) may carry a 1-2 degree rotation to break grid rigidity. Hover removes the rotation for a satisfying snap-to-grid feel."
+      },
+      {
+        "name": "The Two-Face Rule",
+        "section": "typography",
+        "body": "Archivo Black for display headlines only. DM Sans for everything at body size and below. Never mix them at the same scale."
+      },
+      {
+        "name": "The Motion Budget Rule",
+        "section": "motion",
+        "body": "Animations are limited to 420ms max duration, 10-12px max translation, and scale(0.97) for press feedback. All motion disabled under prefers-reduced-motion."
+      }
+    ],
+    "dos": [
+      "Do use Pixel Yellow as the dominant brand surface.",
+      "Do use hard-offset navy shadows on cards and panels.",
+      "Do frame major elements with 2-3px navy borders.",
+      "Do use pixel clusters as structural decoration.",
+      "Do keep headlines short, active, and plainspoken.",
+      "Do show real community photos over stock imagery.",
+      "Do respect prefers-reduced-motion for all animation.",
+      "Do maintain WCAG 2.1 AA contrast on all text.",
+      "Do use the five-color ribbon as a consistent brand marker."
+    ],
+    "donts": [
+      "Do not use soft/blurred shadows.",
+      "Do not use gradients as fills (only in the ribbon structure).",
+      "Do not use muted, pastel, or earth-tone versions of the palette.",
+      "Do not use serif or script typefaces.",
+      "Do not use glassmorphism, frosted panels, or translucent overlays.",
+      "Do not use stock photography of generic children.",
+      "Do not center-align body text.",
+      "Do not use rounded corners larger than 2px.",
+      "Do not use pure black (#000) — always use Ink Navy.",
+      "Do not use the coral red for anything other than errors or urgent states."
+    ]
+  }
+}
