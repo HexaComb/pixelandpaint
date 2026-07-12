@@ -110,9 +110,16 @@ body {
     0 40px 0 0 var(--ink-navy);
 }
 
+.instagram-feed behold-widget {
+  display: block;
+  width: 100%;
+  min-height: 16rem;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   header,
   section > div,
+  .instagram-section,
   footer {
     animation: enter 420ms var(--ease-out) both;
   }
@@ -125,8 +132,12 @@ body {
     animation-delay: 120ms;
   }
 
+  .instagram-section {
+    animation-delay: 160ms;
+  }
+
   footer {
-    animation-delay: 180ms;
+    animation-delay: 200ms;
   }
 }
 

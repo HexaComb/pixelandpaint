@@ -1,5 +1,8 @@
 // Design philosophy: Sunny Pixel Workshop — asymmetric community-poster composition, official logo first, joyful color with disciplined navy structure.
 import Image from "next/image";
+import InstagramFeed from "@/components/instagram-feed";
+
+const INSTAGRAM_URL = "https://www.instagram.com/_pixelandpaint/";
 
 const swatches = [
   { name: "Pixel Yellow", value: "#FFC83D", className: "bg-brand-yellow" },
@@ -11,7 +14,7 @@ const swatches = [
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-canvas-cream text-ink-navy">
+    <main className="relative min-h-screen overflow-x-hidden bg-canvas-cream text-ink-navy">
       <div aria-hidden="true" className="pixel-ribbon" />
 
       <div className="mx-auto flex min-h-screen w-full max-w-[1440px] flex-col px-6 pb-8 pt-6 sm:px-10 lg:px-16">
@@ -47,7 +50,7 @@ export default function Home() {
 
             <a
               className="group mt-9 inline-flex items-center gap-3 border-b-4 border-brand-pink pb-2 text-sm font-extrabold uppercase tracking-[0.16em] transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-6 focus-visible:outline-ink-navy active:scale-[0.97]"
-              href="https://www.instagram.com/_pixelandpaint/"
+              href={INSTAGRAM_URL}
               target="_blank"
               rel="noreferrer"
             >
@@ -78,6 +81,43 @@ export default function Home() {
               Official Instagram profile mark
             </p>
           </div>
+        </section>
+
+        <section
+          aria-labelledby="instagram-heading"
+          className="instagram-section border-t-2 border-ink-navy py-14 sm:py-16"
+        >
+          <div className="mb-8 max-w-2xl">
+            <div className="mb-4 flex items-center gap-2" aria-hidden="true">
+              <span className="h-2.5 w-2.5 bg-brand-orange" />
+              <span className="h-2.5 w-2.5 bg-brand-pink" />
+              <span className="h-2.5 w-2.5 bg-brand-blue" />
+            </div>
+            <h2
+              id="instagram-heading"
+              className="font-display text-balance text-[clamp(1.75rem,4vw,3rem)] leading-[0.95] tracking-[-0.04em]"
+            >
+              From the workshops
+            </h2>
+            <p className="mt-4 max-w-xl text-base leading-7 text-ink-navy/80 sm:text-lg sm:leading-8">
+              Real moments from pop-ups around Fresno—updated when new photos go
+              up on Instagram.
+            </p>
+          </div>
+
+          <InstagramFeed />
+
+          <a
+            className="group mt-8 inline-flex items-center gap-3 border-b-4 border-brand-blue pb-2 text-sm font-extrabold uppercase tracking-[0.16em] transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-6 focus-visible:outline-ink-navy active:scale-[0.97]"
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Follow @_pixelandpaint
+            <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">
+              ↗
+            </span>
+          </a>
         </section>
 
         <footer className="border-t-2 border-ink-navy pt-5">
