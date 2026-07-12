@@ -24,8 +24,8 @@ export default function Home() {
           </p>
         </header>
 
-        <section className="grid flex-1 items-center gap-12 py-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-20 lg:py-16">
-          <div className="relative z-10 max-w-3xl">
+        <section className="grid flex-1 items-center gap-12 py-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-16 xl:gap-20 lg:py-16">
+          <div className="relative z-10 min-w-0 max-w-3xl">
             <div className="mb-7 flex items-center gap-3">
               <span className="h-3 w-3 bg-brand-pink" />
               <span className="h-3 w-3 bg-brand-blue" />
@@ -35,7 +35,7 @@ export default function Home() {
               </p>
             </div>
 
-            <h1 className="font-display max-w-[12ch] text-balance text-[clamp(2.65rem,8vw,7.8rem)] leading-[0.88] tracking-[-0.055em]">
+            <h1 className="font-display max-w-[14ch] text-balance text-[clamp(2.5rem,6.2vw,5.75rem)] leading-[0.9] tracking-[-0.05em]">
               Creativity belongs in every neighborhood.
             </h1>
 
@@ -81,24 +81,19 @@ export default function Home() {
         </section>
 
         <footer className="border-t-2 border-ink-navy pt-5">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-ink-navy/65">
-              Brand foundation · Ready for what comes next
-            </p>
-            <ul className="flex flex-wrap gap-2" aria-label="Pixel & Paint brand colors">
-              {swatches.map((swatch) => (
-                <li
-                  key={swatch.name}
-                  className={`${swatch.className} h-5 w-10 border-2 border-ink-navy`}
-                  title={`${swatch.name} ${swatch.value}`}
-                >
-                  <span className="sr-only">
-                    {swatch.name}: {swatch.value}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul className="flex flex-wrap justify-end gap-2" aria-label="Pixel & Paint brand colors">
+            {swatches.map((swatch) => (
+              <li
+                key={swatch.name}
+                className={`${swatch.className} h-5 w-10 border-2 border-ink-navy`}
+                title={`${swatch.name} ${swatch.value}`}
+              >
+                <span className="sr-only">
+                  {swatch.name}: {swatch.value}
+                </span>
+              </li>
+            ))}
+          </ul>
         </footer>
       </div>
     </main>

@@ -64,7 +64,8 @@ body {
 }
 
 .logo-stage {
-  width: min(100%, 33rem);
+  width: min(100%, 28rem);
+  min-width: 0;
 }
 
 .logo-card {
