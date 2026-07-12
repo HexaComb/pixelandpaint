@@ -17,7 +17,25 @@ Research source: [@_pixelandpaint on Instagram](https://www.instagram.com/_pixel
 | Language | TypeScript 5 |
 | Styling | Tailwind CSS 4 |
 | Fonts | Archivo Black and DM Sans through `next/font` |
+| Instagram feed | [Behold](https://behold.so) via `@behold/react` |
 | Package manager | pnpm |
+
+## Instagram feed (Behold)
+
+The homepage carousel loads recent posts from [@_pixelandpaint](https://www.instagram.com/_pixelandpaint/) through Behold. Behold refreshes on its own schedule (typically within a few hours), so new Instagram posts appear without redeploying.
+
+### Setup
+
+1. Create a Behold account (prefer an org-owned email) and connect `@_pixelandpaint`.
+2. Create a feed with a **carousel** layout and minimal widget chrome.
+3. Copy the feed ID from Embed Code in the Behold dashboard.
+4. Set the env var locally and in Vercel:
+
+```bash
+NEXT_PUBLIC_BEHOLD_FEED_ID=your-feed-id
+```
+
+Copy `.env.example` to `.env.local` and fill in the value for local development. Without this variable, the site still builds and shows a fallback linking to Instagram.
 
 ## Brand foundation
 
@@ -50,6 +68,7 @@ It is used on the homepage, in Open Graph metadata, and as the basis for the app
 
 ```bash
 pnpm install
+cp .env.example .env.local   # then set NEXT_PUBLIC_BEHOLD_FEED_ID
 pnpm dev
 ```
 
@@ -70,8 +89,11 @@ app/
   globals.css   # Tailwind import, brand tokens, and global visual system
   icon.jpg      # App icon derived from the official profile image
   layout.tsx    # Metadata, fonts, and root layout
-  page.tsx      # Minimal branded homepage
+  page.tsx      # Branded homepage + Instagram section
+components/
+  instagram-feed.tsx  # Behold carousel client wrapper
 public/
   pixelandpaint-logo.jpg
+.env.example    # NEXT_PUBLIC_BEHOLD_FEED_ID
 ideas.md        # Recorded visual direction and design decisions
 ```
