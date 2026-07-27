@@ -3,6 +3,9 @@ import Image from "next/image";
 import InstagramFeed from "@/components/instagram-feed";
 
 const INSTAGRAM_URL = "https://www.instagram.com/_pixelandpaint/";
+const ROOT_ACCESS_URL = "https://rootaccess.org/";
+const ROOT_ACCESS_MAP_URL =
+  "https://www.google.com/maps/search/?api=1&query=1476+N.+Van+Ness+Ave.+Fresno+CA+93728";
 
 const swatches = [
   { name: "Pixel Yellow", value: "#FFC83D", className: "bg-brand-yellow" },
@@ -120,20 +123,110 @@ export default function Home() {
           </a>
         </section>
 
-        <footer className="border-t-2 border-ink-navy pt-5">
-          <ul className="flex flex-wrap justify-end gap-2" aria-label="Pixel & Paint brand colors">
-            {swatches.map((swatch) => (
-              <li
-                key={swatch.name}
-                className={`${swatch.className} h-5 w-10 border-2 border-ink-navy`}
-                title={`${swatch.name} ${swatch.value}`}
-              >
-                <span className="sr-only">
-                  {swatch.name}: {swatch.value}
-                </span>
-              </li>
-            ))}
-          </ul>
+        <footer className="relative -mx-6 mt-4 overflow-hidden border-t-[3px] border-ink-navy bg-ink-navy px-6 py-10 text-canvas-cream sm:-mx-10 sm:px-10 sm:py-12 lg:-mx-16 lg:px-16">
+          <div
+            aria-hidden="true"
+            className="absolute right-8 top-0 h-5 w-5 -translate-y-1/2 border-2 border-canvas-cream bg-brand-pink shadow-[-22px_0_0_-2px_#248FCE,-22px_0_0_0_#FFF7E5,-44px_0_0_-2px_#36B86A,-44px_0_0_0_#FFF7E5]"
+          />
+
+          <div className="relative z-10 grid gap-10 lg:grid-cols-[1.1fr_0.95fr_0.75fr] lg:gap-12">
+            <div>
+              <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-brand-yellow">
+                Pixel &amp; Paint
+              </p>
+              <h2 className="mt-4 max-w-[12ch] font-display text-3xl leading-[0.95] tracking-[-0.04em] sm:text-4xl">
+                Make something bright.
+              </h2>
+              <p className="mt-5 max-w-md text-sm leading-7 text-canvas-cream/75 sm:text-base">
+                Free art and technology experiences built with Fresno&apos;s young
+                creators, families, and neighborhoods.
+              </p>
+            </div>
+
+            <div>
+              <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-brand-green">
+                Community location
+              </p>
+              <div className="mt-4 border-l-4 border-brand-pink pl-5">
+                <p className="font-display text-xl leading-tight">Root Access Hackerspace</p>
+                <address className="mt-3 not-italic text-sm leading-7 text-canvas-cream/80 sm:text-base">
+                  1476 N. Van Ness Ave.
+                  <br />
+                  Fresno, CA 93728
+                </address>
+                <a
+                  className="group mt-4 inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow transition-colors hover:text-canvas-cream focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-yellow"
+                  href={ROOT_ACCESS_MAP_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Get directions
+                  <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
+                    ↗
+                  </span>
+                </a>
+              </div>
+              <p className="mt-4 max-w-sm text-xs leading-5 text-canvas-cream/55">
+                Root Access Hackerspace is a separate Fresno nonprofit and community
+                makerspace.
+              </p>
+            </div>
+
+            <div>
+              <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-brand-blue">
+                Stay connected
+              </p>
+              <nav className="mt-4" aria-label="Footer links">
+                <ul className="space-y-3 text-sm font-bold">
+                  <li>
+                    <a
+                      className="group inline-flex items-center gap-2 border-b-2 border-brand-pink pb-1 transition-colors hover:text-brand-yellow focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-yellow"
+                      href={INSTAGRAM_URL}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Instagram
+                      <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
+                        ↗
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="group inline-flex items-center gap-2 border-b-2 border-brand-green pb-1 transition-colors hover:text-brand-yellow focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-yellow"
+                      href={ROOT_ACCESS_URL}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Root Access website
+                      <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
+                        ↗
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div className="relative z-10 mt-10 flex flex-col gap-6 border-t border-canvas-cream/25 pt-6 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-canvas-cream/60">
+              Created with care for Fresno&apos;s young makers.
+            </p>
+            <ul className="flex flex-wrap gap-2" aria-label="Pixel & Paint brand colors">
+              {swatches.map((swatch) => (
+                <li
+                  key={swatch.name}
+                  className={`${swatch.className} h-4 w-8 border border-canvas-cream`}
+                  title={`${swatch.name} ${swatch.value}`}
+                >
+                  <span className="sr-only">
+                    {swatch.name}: {swatch.value}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </footer>
       </div>
     </main>
