@@ -87,6 +87,66 @@ export default function Home() {
         </section>
 
         <section
+          aria-labelledby="about-heading"
+          className="relative border-t-2 border-ink-navy py-14 sm:py-16"
+        >
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
+            <div className="relative max-w-xl">
+              <div className="mb-5 flex items-end gap-2" aria-hidden="true">
+                <span className="h-4 w-4 bg-brand-yellow" />
+                <span className="h-7 w-4 bg-brand-pink" />
+                <span className="h-10 w-4 bg-brand-blue" />
+                <span className="h-6 w-4 bg-brand-green" />
+              </div>
+              <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-ink-navy/65">
+                About us
+              </p>
+              <h2
+                id="about-heading"
+                className="mt-4 max-w-[13ch] font-display text-balance text-[clamp(2rem,4.5vw,3.75rem)] leading-[0.94] tracking-[-0.045em]"
+              >
+                We make room for young people to create.
+              </h2>
+            </div>
+
+            <div className="max-w-3xl">
+              <p className="text-lg leading-8 text-ink-navy/85 sm:text-xl sm:leading-9">
+                Pixel &amp; Paint is a Fresno-based community initiative creating
+                free art and technology pop-ups for kids in low-income housing
+                communities.
+              </p>
+              <p className="mt-5 text-base leading-7 text-ink-navy/75 sm:text-lg sm:leading-8">
+                We believe creative confidence grows when young people have welcoming
+                places to experiment, make mistakes, share ideas, and see themselves
+                as creators. Each experience brings hands-on art, digital exploration,
+                and cultural expression together.
+              </p>
+
+              <dl className="mt-9 grid gap-5 sm:grid-cols-3">
+                <div className="border-2 border-ink-navy border-t-8 border-t-brand-yellow bg-canvas-cream p-5 shadow-[6px_6px_0_0_#102A43]">
+                  <dt className="font-display text-lg leading-tight">Free to join</dt>
+                  <dd className="mt-3 text-sm leading-6 text-ink-navy/70">
+                    No-cost pop-ups designed to remove barriers to creativity.
+                  </dd>
+                </div>
+                <div className="border-2 border-ink-navy border-t-8 border-t-brand-pink bg-canvas-cream p-5 shadow-[6px_6px_0_0_#102A43]">
+                  <dt className="font-display text-lg leading-tight">Neighborhood first</dt>
+                  <dd className="mt-3 text-sm leading-6 text-ink-navy/70">
+                    Creative experiences brought directly into Fresno communities.
+                  </dd>
+                </div>
+                <div className="border-2 border-ink-navy border-t-8 border-t-brand-blue bg-canvas-cream p-5 shadow-[6px_6px_0_0_#102A43]">
+                  <dt className="font-display text-lg leading-tight">Art + technology</dt>
+                  <dd className="mt-3 text-sm leading-6 text-ink-navy/70">
+                    Hands-on making that connects imagination with digital tools.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </section>
+
+        <section
           aria-labelledby="instagram-heading"
           className="instagram-section border-t-2 border-ink-navy py-14 sm:py-16"
         >
